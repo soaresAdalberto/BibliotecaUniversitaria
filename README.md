@@ -13,3 +13,11 @@
  - No programa principal, popularmente conhecido como "main", foram declarados os métodos de manipulação das classes;
  - Acervo foi definida como classe mãe, ou seja, contém os atributos comuns entre "Livros.h", "Mapas.h", "Cartazes.h", "Midias.h", "Periodicos.h", "Relatorios.h" e "TrabalhosConclusao.h";
  - As classes "Leitor.h" e "Emprestimo.h" são independentes. Enquanto a primeira foi criada para armazenar os dados pessoais leitor (como nome e CPF), a segunda é utilizada para o emprestar os materiais que estão disponíveis.  
+
+##### 4. Considerações finais:
+
+Usuário padrão já pré criado para o professor Eric:
+-Login: admin
+-Senha: 1q2w3e
+
+Portanto, com a criação desse programa foi possível identificar como funciona a demanda e o fluxo de uma biblioteca universitária, abstraindo conceitos de programação orientada a objetos em C++.
