@@ -1,0 +1,58 @@
+# Project: Biblioteca_Universitaria
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Acervo.o Emprestimo.o Leitor.o Livros.o Relatorios.o Cartazes.o Periodicos.o Mapas.o TrabalhosConclusao.o Midias.o
+LINKOBJ  = main.o Acervo.o Emprestimo.o Leitor.o Livros.o Relatorios.o Cartazes.o Periodicos.o Mapas.o TrabalhosConclusao.o Midias.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Biblioteca_Universitaria.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Acervo.o: Acervo.cpp
+	$(CPP) -c Acervo.cpp -o Acervo.o $(CXXFLAGS)
+
+Emprestimo.o: Emprestimo.cpp
+	$(CPP) -c Emprestimo.cpp -o Emprestimo.o $(CXXFLAGS)
+
+Leitor.o: Leitor.cpp
+	$(CPP) -c Leitor.cpp -o Leitor.o $(CXXFLAGS)
+
+Livros.o: Livros.cpp
+	$(CPP) -c Livros.cpp -o Livros.o $(CXXFLAGS)
+
+Relatorios.o: Relatorios.cpp
+	$(CPP) -c Relatorios.cpp -o Relatorios.o $(CXXFLAGS)
+
+Cartazes.o: Cartazes.cpp
+	$(CPP) -c Cartazes.cpp -o Cartazes.o $(CXXFLAGS)
+
+Periodicos.o: Periodicos.cpp
+	$(CPP) -c Periodicos.cpp -o Periodicos.o $(CXXFLAGS)
+
+Mapas.o: Mapas.cpp
+	$(CPP) -c Mapas.cpp -o Mapas.o $(CXXFLAGS)
+
+TrabalhosConclusao.o: TrabalhosConclusao.cpp
+	$(CPP) -c TrabalhosConclusao.cpp -o TrabalhosConclusao.o $(CXXFLAGS)
+
+Midias.o: Midias.cpp
+	$(CPP) -c Midias.cpp -o Midias.o $(CXXFLAGS)
